@@ -5,7 +5,7 @@ $(document).ready(function () {
 	function renderButtons() {
 		$("#animal-buttons").empty();
 		for (i = 0; i < animals.length; i++) {
-			$("#animal-buttons").append("<button class='btn btn-success' data-animal='" + animals[i] + "'>" + animals[i] + "</button>");
+			$("#animal-buttons").append("<button class='btn btn-primary' data-animal='" + animals[i] + "'>" + animals[i] + "</button>");
 		}
 		$("button").on("click", function () {
 			var animalGif = $(this).attr("data-animal");
@@ -62,6 +62,6 @@ $(document).ready(function () {
 			$(this).attr("data-state", "still");
 		}
 	}
-	
+
 	$(document).on("click", ".gif", changeState);
 });
